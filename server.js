@@ -8,6 +8,9 @@ const http = require("http").createServer(app);
 // set the view engine as EJS
 app.set("view engine", "ejs");
 
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
 // include mongo DB module
 const { MongoClient } = require("mongodb");
 const url = "mongodb://localhost:27017";
